@@ -40,6 +40,7 @@ static struct extension_category_info categories_info[] = {
 static struct extension_info extensions_info[] = {
 	{HOEDOWN_EXT_TABLES, "tables", "Parse PHP-Markdown style tables."},
 	{HOEDOWN_EXT_FENCED_CODE, "fenced-code", "Parse fenced code blocks."},
+	{HOEDOWN_EXT_HIDDEN_BLOCK, "hidden-block", "Parse hidden blocks."},	
 	{HOEDOWN_EXT_FOOTNOTES, "footnotes", "Parse footnotes."},
 
 	{HOEDOWN_EXT_AUTOLINK, "autolink", "Automatically turn safe URLs into links."},

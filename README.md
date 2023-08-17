@@ -8,6 +8,14 @@ make
 
 ## Step 2. Run it
 
+To see the options:
+
+```
+./hoedown -h
+```
+
+Typical usage:
+
 ```
 
 ```

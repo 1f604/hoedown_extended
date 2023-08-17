@@ -11,3 +11,4 @@
 **/libhoedown.so*
 **/libhoedown.a
 **/*.db
+output.html

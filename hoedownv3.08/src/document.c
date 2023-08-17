@@ -1754,6 +1754,13 @@ parse_paragraph(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t
 	return end;
 }
 
+/* hiddenblock • handles parsing of a block of hidden text */
+static size_t
+parse_hiddenblock(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t size)
+{
+	// TODO: implement this.
+}
+
 /* parse_fencedcode • handles parsing of a block-level code fragment */
 static size_t
 parse_fencedcode(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t size)
@@ -2495,6 +2502,10 @@ parse_block(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t siz
 
 			beg++;
 		}
+
+		else if ((doc->ext_flags & HOEDOWN_EXT_HIDDEN_BLOCK) != 0 &&
+			(i = parse_hiddenblock(ob, doc, txt_data, end)) != 0)
+			beg += i;
 
 		else if ((doc->ext_flags & HOEDOWN_EXT_FENCED_CODE) != 0 &&
 			(i = parse_fencedcode(ob, doc, txt_data, end)) != 0)
